@@ -1,0 +1,16 @@
+{
+  "name": "nodesharpen",
+  "version": "1.0.0",
+  "description": "project",
+  "main": "project1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node project1.js",
+    "start-server":"node project1.js"
+  },
+  "author": "arun",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
