@@ -1,7 +1,10 @@
-const express=require("express");
-const router=express.Router();
-router.get('/',(req,res,next)=>{
-    
-    res.send('<h1>from express middleware</h1>');
-})
-module.exports=router;
+const express = require('express');
+const path=require('path');
+const router = express.Router();
+const rootDir=require('../util/path');
+
+router.get('/', (req, res, next) => {
+  res.sendFile(path.join(rootDir,'views','shop.html'));
+});
+
+module.exports = router;
