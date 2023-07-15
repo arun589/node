@@ -1,13 +1,10 @@
-const prod=(num1,num2)=>{
-    return num1*num2;
+const path=require('path');
+const rootDir=require('../util/path');
+exports.getcontact=(req, res, next) => {
+    res.sendFile(path.join(rootDir,'views','contact.html'));
 }
-console.log(prod(2,3));
-const student={
-    name:"arun",
-    age:"21",
-    marks:100,
-    greet(){
-        console.log(this.name);
-    }
+exports.postcontact= (req, res, next) => {
+    console.log(req.body);
+    res.send('<h1>form succesfully filled');
+    
 }
-student.greet();
