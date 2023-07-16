@@ -1,10 +1,12 @@
-const path=require('path');
-const rootDir=require('../util/path');
-exports.getcontact=(req, res, next) => {
-    res.sendFile(path.join(rootDir,'views','contact.html'));
-}
-exports.postcontact= (req, res, next) => {
-    console.log(req.body);
-    res.send('<h1>form succesfully filled');
-    
+const product=[];
+module.exports=class products{
+    constructor(t){
+        this.title=t;
+    }
+    save(){
+        product.push(this.title);
+    }
+    static fetchAll(){
+        return product;
+    }
 }
